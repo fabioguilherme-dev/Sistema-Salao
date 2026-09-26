@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Fábio Guilherme">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/salao.css">
+        
+        <title>Document</title>
+    </head>
+
+<body>
+
+    <h2>AGENDAMENTO</h2>
+
+    <ul class="menu">
+        <li><a href="index.html">← PÁGINA PRINCIPAL</a></li>
+    </ul>
+
+    <fieldset>
+        <legend><strong>DADOS DO AGENDAMENTO</strong></legend>
+
+        <form onsubmit="cadastrarAgendamento(); return false;">
+
+            <label><strong>Nome:</strong></label><br>
+            <input type="text" id="nome" style="width: 90%; padding: 10px;" required><br><br>
+
+            <label><strong>Profissional Preferido</strong></label><br>
+            <select id="profissional">
+                <option value="Esmael (Barbeiro)">Esmael (Barbeiro)</option>
+                <option value="João Neri (Barbeiro)">João Neri (Barbeiro)</option>
+                <option value="Paulo (Barbeiro)">Paulo (Barbeiro)</option>
+                <option value="Jéssica (Manicure)">Jéssica (Manicure)</option>
+                <option value="Natally (Esteticista)">Natally (Esteticista)</option>
+                <option value="Rafaella (Cabeleireira)">Rafaella (Cabeleireira)</option>
+                <option value="Indiferente">Indiferente</option>
+            </select> <br><br>
+
+            <label><strong>Sexo</strong></label>
+            <input type="radio" name="sexo" value="Masculino" required> Masculino
+            <input type="radio" name="sexo" value="Feminino" required> Feminino <br><br>
+
+            <label><strong>Serviços Desejados</strong></label>
+
+            <input type="checkbox" class="serv" value="Corte"> Corte de Cabelo
+            <input type="checkbox" class="serv" value="Barba"> Barba
+            <input type="checkbox" class="serv" value="Coloração"> Coloração
+            <input type="checkbox" class="serv" value="Escova"> Escova
+            <input type="checkbox" class="serv" value="Escova / Hidratação"> Escova / Hidratação
+            <input type="checkbox" class="serv" value="Manicure"> Manicure <br><br>
+
+            <label><strong>Data do Agendamento</strong></label>
+            <input type="date" id="data" required><br><br>
+
+            <label><strong>Horário:</strong></label>
+            <input type="time" id="horario" style="padding: 10px;" required><br><br>
+
+            <input class="botao" type="submit" value="CONFIRMAR AGENDAMENTO">
+
+            
+        </form>
+    </fieldset>
+
+    <div id="resultado" style="margin-top: 20px; min-height: 50px"></div>
+
+    <script src="js/salao.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Fábio Guilherme">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Comprovante de Agendamento</title>
+
+        <link rel="stylesheet" href="css/salao.css">
+    </head>
+
+<body>
+
+    <div id="resultado"></div>
+
+        <script>
+
+            let nomeCliente = localStorage.getItem("nomeCliente") || "Não Informado";
+            let profissional = localStorage.getItem("profissional") || "Não Informado";
+            let sexoCliente = localStorage.getItem("sexoCliente") || "Não Informado";
+            let listaServicos = localStorage.getItem("listaServicos") || "Não Informado";
+            let dataAtendimento = localStorage.getItem("data") || "Não Informado";
+            let horarioAtendimento = localStorage.getItem("horario") || "Não Informado";
+            let areaResultado = document.getElementById("resultado");
+
+            areaResultado.innerHTML = `
+            <div class="comprovante">
+                <h3 class="titulo-comprovante"> COMPROVANTE DE AGENDAMENTO - SALÃO </h3>
+                <hr>
+                <!-- Exibe o nome do cliente e os demais dados -->
+                <p><strong>Cliente:</strong> ${nomeCliente}</p>
+                <p><strong>Profissional:</strong> ${profissional}</p>
+                <p><strong>Sexo:</strong> ${sexoCliente}</p>
+                <p><strong>Serviços:</strong> ${listaServicos}</p>
+                <p><strong>Data de Atendimento:</strong> ${dataAtendimento}</p>
+                <p><strong>Horário:</strong> ${horarioAtendimento}</p>
+
+                <button onclick="window.print()" class="botao"> IMPRIMIR COMPROVANTE </button>
+
+                <br><br>
+
+                <a href="cadastro_agendamentos.html" style="color: #06302b; font-weight: bold; text-decoration: none;"> ← VOLTAR PARA O CADASTRO </a>
+
+            </div>
+        `;
+        </script>
+    
+</body>
+
+</html>
